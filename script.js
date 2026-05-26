@@ -18,9 +18,9 @@ const quizQuestions = [
     },
 
     {
-        club: "River Plate",
+        club: "Arsenal",
         options: ["England", "Spain", "Argentina"],
-        correctAnswer: "Spain"
+        correctAnswer: "England"
     },
 
     {
@@ -32,9 +32,13 @@ const quizQuestions = [
 ]
 
 let score = 0;
+const scoreEl = document.getElementById("score")
+
+const container = document.getElementById("container")
 
 for (const currentQuestion of quizQuestions) {
     const section = document.createElement("section")
+    section.className = "section"
 
     const club = document.createElement("h2")
     club.textContent = currentQuestion.club
@@ -43,17 +47,30 @@ for (const currentQuestion of quizQuestions) {
     console.log(section)
 
     const answersContainer = document.createElement("div")
-
-    for (answer of options) {
+    answersContainer.className = "answer-btn-containers"
+    
+    for (answer of currentQuestion.options) {
         const answerBtn = document.createElement("button")
         answerBtn.textContent = answer
         answersContainer.appendChild(answerBtn)
+        
+        answerBtn.addEventListener("click", () => {
+            if (answerBtn.textContent === currentQuestion.correctAnswer) {
+                score++
+                answerValidation.textContent = "Correct!"
+            } else {
+                answerValidation.textContent = "Wrong!"
+            }
+            scoreEl.textContent = score
+        })
     }
 
     section.appendChild(answersContainer)
 
     const answerValidation = document.createElement("h4")
     section.appendChild(answerValidation)
-
-    document.getElementById("container").appendChild(section)
+    
+    container.appendChild(section)
 }
+
+

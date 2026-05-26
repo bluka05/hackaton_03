@@ -1,8 +1,8 @@
-# Project Documentation
+# Soccer Club Quizz
 
 ## Project Overview
 
-[Provide a brief summary of the project, including the theme and objectives.]
+Hackathon 3 - we are building a short quizz where you need to guess the country in which the soccer club belongs.
 
 ## Team Members
 
@@ -14,12 +14,18 @@
 
 ### Maximilian Kreuser
 
-- 
+- Filled in the project documentation md file.
+- Added the for loop in JS.
+- Styled the css
 
 ### Daniel Oyebadejo
 
--   Was responsible for [specific tasks], focusing on [specific HTML elements].
+- Added the HTML structure
+- Added the event listener function for the answer buttons
+- Fixed the data
 
 ### Ben Luka
 
--   Handled [specific sections], covering [specific topics or features].
+- Added the data for the quizQuestions
+- Created the github repository
+- Worked out the branching situation

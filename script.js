@@ -32,6 +32,7 @@ const quizQuestions = [
 ]
 
 let score = 0;
+const scoreEl = document.getElementById("score")
 
 const container = document.getElementById("container")
 
@@ -43,30 +44,29 @@ for (const currentQuestion of quizQuestions) {
     section.appendChild(club)
 
     const answersContainer = document.createElement("div")
-
+    
     for (answer of currentQuestion.options) {
         const answerBtn = document.createElement("button")
         answerBtn.textContent = answer
         answersContainer.appendChild(answerBtn)
+        
+        answerBtn.addEventListener("click", () => {
+            if (answerBtn.textContent === currentQuestion.correctAnswer) {
+                score++
+                answerValidation.textContent = "Correct!"
+            } else {
+                answerValidation.textContent = "Wrong!"
+            }
+            scoreEl.textContent = score
+        })
     }
 
     section.appendChild(answersContainer)
 
     const answerValidation = document.createElement("h4")
     section.appendChild(answerValidation)
-<<<<<<< HEAD
     
-
     container.appendChild(section)
 }
-=======
-    answerBtn.addEventListener("click", () => {
-        if (answerBtn.textContent === currentQuestion.correctAnswer) {
-            score++
-            answerValidation.textContent = "Correct!"
-        } else {
-            answerValidation.textContent = "Wrong!"
-        }
-    })
-}
->>>>>>> a9b7ec1411884d1e72d2370f54c6c1d6fccdb2cd
+
+

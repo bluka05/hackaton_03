@@ -40,6 +40,8 @@ for (const currentQuestion of quizQuestions) {
     club.textContent = currentQuestion.club
     section.appendChild(club)
 
+    console.log(section)
+
     const answersContainer = document.createElement("div")
 
     for (answer of options) {
@@ -52,4 +54,6 @@ for (const currentQuestion of quizQuestions) {
 
     const answerValidation = document.createElement("h4")
     section.appendChild(answerValidation)
+
+    document.getElementById("container").appendChild(section)
 }

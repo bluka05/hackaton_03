@@ -33,6 +33,8 @@ const quizQuestions = [
 
 let score = 0;
 
+const container = document.getElementById("container")
+
 for (const currentQuestion of quizQuestions) {
     const section = document.createElement("section")
 
@@ -42,7 +44,7 @@ for (const currentQuestion of quizQuestions) {
 
     const answersContainer = document.createElement("div")
 
-    for (answer of options) {
+    for (answer of currentQuestion.options) {
         const answerBtn = document.createElement("button")
         answerBtn.textContent = answer
         answersContainer.appendChild(answerBtn)
@@ -52,4 +54,7 @@ for (const currentQuestion of quizQuestions) {
 
     const answerValidation = document.createElement("h4")
     section.appendChild(answerValidation)
+    
+
+    container.appendChild(section)
 }

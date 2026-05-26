@@ -54,7 +54,19 @@ for (const currentQuestion of quizQuestions) {
 
     const answerValidation = document.createElement("h4")
     section.appendChild(answerValidation)
+<<<<<<< HEAD
     
 
     container.appendChild(section)
 }
+=======
+    answerBtn.addEventListener("click", () => {
+        if (answerBtn.textContent === currentQuestion.correctAnswer) {
+            score++
+            answerValidation.textContent = "Correct!"
+        } else {
+            answerValidation.textContent = "Wrong!"
+        }
+    })
+}
+>>>>>>> a9b7ec1411884d1e72d2370f54c6c1d6fccdb2cd

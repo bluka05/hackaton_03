@@ -18,9 +18,9 @@ const quizQuestions = [
     },
 
     {
-        club: "River Plate",
+        club: "Arsenal",
         options: ["England", "Spain", "Argentina"],
-        correctAnswer: "Spain"
+        correctAnswer: "England"
     },
 
     {

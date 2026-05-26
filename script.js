@@ -44,6 +44,8 @@ for (const currentQuestion of quizQuestions) {
     club.textContent = currentQuestion.club
     section.appendChild(club)
 
+    console.log(section)
+
     const answersContainer = document.createElement("div")
     answersContainer.className = "answer-btn-containers"
     

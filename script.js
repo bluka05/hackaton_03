@@ -38,12 +38,14 @@ const container = document.getElementById("container")
 
 for (const currentQuestion of quizQuestions) {
     const section = document.createElement("section")
+    section.className = "section"
 
     const club = document.createElement("h2")
     club.textContent = currentQuestion.club
     section.appendChild(club)
 
     const answersContainer = document.createElement("div")
+    answersContainer.className = "answer-btn-containers"
     
     for (answer of currentQuestion.options) {
         const answerBtn = document.createElement("button")
